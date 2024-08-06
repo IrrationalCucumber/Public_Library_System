@@ -9,15 +9,15 @@ function SignIn() {
         alert("Pleasse input username/password")
     }
     alert(username + " " + password)
-    try {
-        const res = await axios.get('https://localhost/user/' + {params: { username: username, password: password}});
-        if(res !== null){
-            alert("SUCCESS!")
-        }
-    } catch (error) {
-        console.log(error);
+    // try {
+    //     const res = await axios.get('https://localhost/user/' + {params: { username: username, password: password}});
+    //     if(res !== null){
+    //         alert("SUCCESS!")
+    //     }
+    // } catch (error) {
+    //     console.log(error);
         
-    }
+    // }
 }
   return (
     <>
