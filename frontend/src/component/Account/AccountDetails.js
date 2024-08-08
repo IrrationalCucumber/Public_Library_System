@@ -40,7 +40,7 @@ export function AccountAdd() {
         onChange={handleChange}
       />
       <input type="number" placeholder="Enter age..." name="age" />
-      <select name="sex" onChange={handleChange}>
+      <select name="sex" onChange={handleChange} value={account.sex}>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
@@ -63,7 +63,7 @@ export function AccountAdd() {
         name="address"
         onChange={handleChange}
       />
-      <select name="type" onChange={handleChange}>
+      <select name="type" onChange={handleChange} value={account.type}>
         <option>Customer</option>
         <option>Admin</option>
         <option>Staff</option>
