@@ -1,6 +1,5 @@
-import { Button, CardContent } from "@mui/joy";
+import { AspectRatio, Button, Card, CardContent, Typography } from "@mui/joy";
 import {
-  Card,
   CardActionArea,
   CardActions,
   CardHeader,
@@ -11,10 +10,20 @@ import React from "react";
 export default function BookList() {
   return (
     <div>
-      <Card variant="outlined">
+      <Card variant="outlined" sx={{ width: 320, height: 300 }}>
         <CardActionArea onClick={(e) => alert("Clicked!")}>
           <CardHeader avatar="BookID" />
-          <CardMedia component="img" src="" alt="BookImage" />
+          <Typography level="title-lg" noWrap variant="plain">
+            BookTItle
+          </Typography>
+          <AspectRatio minHeight="120px" maxHeight="200px">
+            <img
+              src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+              srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+              loading="lazy"
+              alt=""
+            />
+          </AspectRatio>
           <CardContent>Book Descroption</CardContent>
         </CardActionArea>
         <CardActions>
