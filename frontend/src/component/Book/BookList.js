@@ -1,4 +1,11 @@
-import { AspectRatio, Button, Card, CardContent, Typography } from "@mui/joy";
+import {
+  AspectRatio,
+  Button,
+  Card,
+  CardContent,
+  Chip,
+  Typography,
+} from "@mui/joy";
 import {
   CardActionArea,
   CardActions,
@@ -10,7 +17,7 @@ import React from "react";
 export default function BookList() {
   return (
     <div>
-      <Card variant="outlined" sx={{ width: 320 }}>
+      <Card variant="outlined" sx={{ width: 320, overflow: "auto" }}>
         <CardActionArea onClick={(e) => alert("Clicked!")}>
           <CardHeader avatar="BookID" />
           <Typography level="title-lg" noWrap variant="plain">
@@ -24,7 +31,15 @@ export default function BookList() {
               alt=""
             />
           </AspectRatio>
-          <CardContent>Book Descroption</CardContent>
+          <CardContent>
+            <Chip color="neutral" size="md" variant="outlined">
+              bookGenre
+            </Chip>
+            <Typography level="body-sm">
+              We are a community of developers prepping for coding interviews,
+              participate, chat with others and get better at interviewing.
+            </Typography>
+          </CardContent>
         </CardActionArea>
         <CardActions>
           <Button
