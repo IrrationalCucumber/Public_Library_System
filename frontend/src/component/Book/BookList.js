@@ -10,7 +10,7 @@ import React from "react";
 export default function BookList() {
   return (
     <div>
-      <Card variant="outlined" sx={{ width: 320, height: 300 }}>
+      <Card variant="outlined" sx={{ width: 320 }}>
         <CardActionArea onClick={(e) => alert("Clicked!")}>
           <CardHeader avatar="BookID" />
           <Typography level="title-lg" noWrap variant="plain">
