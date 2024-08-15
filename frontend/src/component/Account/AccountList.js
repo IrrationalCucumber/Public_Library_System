@@ -15,6 +15,16 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function AccountList() {
   const sampleAccounts = ["name1", "name2", "name3", "name4"];
+  //Accept request of user
+  const handleAccept = async (id) => {
+    const userID = id;
+    try {
+      const res = await axios.post(`http://localhost:8800/user/add/${userID}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       {sampleAccounts.map((account, index) => (
@@ -29,9 +39,30 @@ export default function AccountList() {
                 ACTIONS
               </MenuButton>
               <Menu variant="soft" color="primary">
-                <MenuItem color="primary">Accept</MenuItem>
-                <MenuItem color="danger">Deny</MenuItem>
-                <MenuItem color="warning">Suspend</MenuItem>
+                <MenuItem
+                  color="primary"
+                  onClick={(e) => {
+                    handleAccept;
+                  }}
+                >
+                  Accept
+                </MenuItem>
+                <MenuItem
+                  color="danger"
+                  onClick={(e) => {
+                    handleDeny(id);
+                  }}
+                >
+                  Deny
+                </MenuItem>
+                <MenuItem
+                  color="warning"
+                  onClick={(e) => {
+                    handleSuspend;
+                  }}
+                >
+                  Suspend
+                </MenuItem>
               </Menu>
             </Dropdown>
           </ListItem>
