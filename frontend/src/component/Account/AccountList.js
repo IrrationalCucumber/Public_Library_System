@@ -33,6 +33,15 @@ export default function AccountList() {
       console.log(error);
     }
   };
+  //Suspend user account
+  const handleSuspend = async (id) => {
+    const userID = id;
+    try {
+      const res = await axios.post(``);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
