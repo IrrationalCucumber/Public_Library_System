@@ -24,6 +24,15 @@ export default function AccountList() {
       console.log(error);
     }
   };
+  //Deny user request
+  const handleDeny = async (id) => {
+    const userID = id;
+    try {
+      const res = await axios.post(`http://localhost:8800/user/deny/${userID}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
