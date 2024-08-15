@@ -60,7 +60,7 @@ export default function AccountList() {
                 <MenuItem
                   color="primary"
                   onClick={(e) => {
-                    handleAccept;
+                    handleAccept(id);
                   }}
                 >
                   Accept
@@ -76,7 +76,7 @@ export default function AccountList() {
                 <MenuItem
                   color="warning"
                   onClick={(e) => {
-                    handleSuspend;
+                    handleSuspend(id);
                   }}
                 >
                   Suspend
