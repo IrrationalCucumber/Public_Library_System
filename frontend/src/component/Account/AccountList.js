@@ -12,6 +12,7 @@ import {
 import React from "react";
 import AccountListItem from "./AccountListItem";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import axios from "axios";
 
 export default function AccountList() {
   const sampleAccounts = ["name1", "name2", "name3", "name4"];
@@ -60,7 +61,7 @@ export default function AccountList() {
                 <MenuItem
                   color="primary"
                   onClick={(e) => {
-                    handleAccept(id);
+                    handleAccept(index);
                   }}
                 >
                   Accept
@@ -68,7 +69,7 @@ export default function AccountList() {
                 <MenuItem
                   color="danger"
                   onClick={(e) => {
-                    handleDeny(id);
+                    handleDeny(index);
                   }}
                 >
                   Deny
@@ -76,7 +77,7 @@ export default function AccountList() {
                 <MenuItem
                   color="warning"
                   onClick={(e) => {
-                    handleSuspend(id);
+                    handleSuspend(index);
                   }}
                 >
                   Suspend
