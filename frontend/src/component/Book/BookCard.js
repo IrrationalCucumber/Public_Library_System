@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-export default function BookList() {
+export default function BookCard(props) {
   return (
     <div>
       <Card variant="outlined" sx={{ width: 320, overflow: "auto" }}>
