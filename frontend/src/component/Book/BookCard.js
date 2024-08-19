@@ -21,7 +21,7 @@ export default function BookCard(props) {
         <CardActionArea onClick={(e) => alert("Clicked!")}>
           <CardHeader avatar="BookID" />
           <Typography level="title-lg" noWrap variant="plain">
-            BookTItle
+            {props.title}
           </Typography>
           <AspectRatio minHeight="120px" maxHeight="200px">
             <img
@@ -33,7 +33,7 @@ export default function BookCard(props) {
           </AspectRatio>
           <CardContent>
             <Chip color="neutral" size="md" variant="outlined">
-              bookGenre
+              {props.genre}
             </Chip>
             <Typography level="body-sm">
               We are a community of developers prepping for coding interviews,
